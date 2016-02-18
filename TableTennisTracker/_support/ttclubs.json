@@ -1,0 +1,190 @@
+[ 
+, { value: "0", name: "Alle" }
+, { value: "287", name: "A000 - Individueel Antwerpen" }
+, { value: "34", name: "A003 - KTTC Salamander Mechelen" }
+, { value: "187", name: "A008 - TTC Ekerse" }
+, { value: "150", name: "A062 - KTTC  A.F.P. Antwerpen" }
+, { value: "299", name: "A074 - KTTC Sporting Hove" }
+, { value: "298", name: "A075 - TTC Rupel" }
+, { value: "309", name: "A095 - TTK Turnhout" }
+, { value: "302", name: "A097 - KTTC Nijlen" }
+, { value: "295", name: "A105 - TTK Dessel" }
+, { value: "28", name: "A115 - TTK Dylan Berlaar" }
+, { value: "236", name: "A117 - Geelse TTC" }
+, { value: "306", name: "A118 - TTK Rijkevorsel" }
+, { value: "312", name: "A123 - TTC Virtus" }
+, { value: "305", name: "A127 - TTC Retie" }
+, { value: "292", name: "A129 - Borsbeek TTK" }
+, { value: "33", name: "A130 - TTC Schoten" }
+, { value: "31", name: "A135 - TTC Minderhout" }
+, { value: "294", name: "A136 - TTC Zoersel" }
+, { value: "291", name: "A138 - TTC Blue Rackets" }
+, { value: "296", name: "A139 - KTTC Hallaar" }
+, { value: "761", name: "A141 - TTK Merksplas" }
+, { value: "310", name: "A142 - TTC Tecemo" }
+, { value: "307", name: "A146 - Sevos TTC" }
+, { value: "152", name: "A147 - TTK Gierle" }
+, { value: "26", name: "A155 - TTC Wommelgem" }
+, { value: "773", name: "A159 - TTK Real" }
+, { value: "35", name: "A160 - T.T.C. Walem" }
+, { value: "300", name: "A167 - TTC Lille "Boemerangske"" }
+, { value: "148", name: "A176 - TTC Sokah Hoboken" }
+, { value: "147", name: "A182 - TTC Nodo" }
+, { value: "311", name: "A184 - TTC Tisselt" }
+, { value: "313", name: "A186 - TTC Willebroek" }
+, { value: "29", name: "A201 - TTC Hulshout" }
+, { value: "297", name: "A210 - TTC Heemskerk" }
+, { value: "314", name: "A211 - TTK Zwijndrecht" }
+, { value: "214", name: "A212 - TTC Sint Antonius" }
+, { value: "767", name: "A216 - TTC Henricus" }
+, { value: "288", name: "LK000 - Individueel Limburg" }
+, { value: "341", name: "LK006 - TTC Opitter" }
+, { value: "69", name: "LK007 - K.T.T.C. Meteor Bree" }
+, { value: "215", name: "LK009 - KTTC Leopoldsburg" }
+, { value: "216", name: "LK010 - TTC Palet Houthalen" }
+, { value: "217", name: "LK012 - TTV Lipalet" }
+, { value: "76", name: "LK016 - T.T.C. Smash Heusden" }
+, { value: "77", name: "LK017 - TTC Voorshoven vzw" }
+, { value: "70", name: "LK024 - T.T.C. Aarschot" }
+, { value: "339", name: "LK026 - TTC Rijkel-Borgloon" }
+, { value: "218", name: "LK031 - TTC Jevota Lanaken" }
+, { value: "71", name: "LK033 - T.T.C. As" }
+, { value: "342", name: "LK036 - TTC Lommel" }
+, { value: "343", name: "LK037 - TTC Bambi" }
+, { value: "72", name: "LK049 - T.T.K. Herckenrode" }
+, { value: "73", name: "LK051 - TTC Hasselt" }
+, { value: "219", name: "LK052 - TTC Schulen" }
+, { value: "344", name: "LK054 - Hatatek Hamont" }
+, { value: "146", name: "LK056 - TTC Morata Mol" }
+, { value: "345", name: "LK058 - TTC Opglabbeek" }
+, { value: "78", name: "LK060 - TTC Westel" }
+, { value: "346", name: "LK061 - TTC Paal" }
+, { value: "347", name: "LK062 - TTK Genk" }
+, { value: "348", name: "LK068 - TTC Tongeren" }
+, { value: "349", name: "LK071 - TTC  RS Bilzen" }
+, { value: "350", name: "LK076 - TTV Meeuwen" }
+, { value: "351", name: "LK084 - TTC Centrum Hasselt" }
+, { value: "352", name: "LK085 - TTC Mattec" }
+, { value: "353", name: "LK086 - TTC Dilsen" }
+, { value: "354", name: "LK087 - TTC Bocholt vzw" }
+, { value: "356", name: "LK089 - TTC Hechtel-Eksel" }
+, { value: "357", name: "LK092 - TTC Sint-Truiden" }
+, { value: "220", name: "LK093 - TTV Malpertuus" }
+, { value: "358", name: "LK095 - TTC Smash Zutendaal" }
+, { value: "74", name: "LK100 - T.T.C. Alken" }
+, { value: "221", name: "LK103 - TTC Tamara Hoeselt" }
+, { value: "257", name: "LK105 - TTC Stokrooie" }
+, { value: "75", name: "LK109 - T.T.V. Neerpelt" }
+, { value: "238", name: "LK110 - TTC Molenbeersel" }
+, { value: "359", name: "LK111 - TTC Diepenbeek" }
+, { value: "361", name: "LK115 - TTC Fair Play Peer" }
+, { value: "774", name: "LK117 - TTC Voeren" }
+, { value: "285", name: "OVL000 - Individueel" }
+, { value: "36", name: "OVL001 - TTC Gent V.Z.W." }
+, { value: "37", name: "OVL012 - KTTC Meteor Oudenaarde" }
+, { value: "263", name: "OVL018 - KTTC Eikenlo-Eeklo vzw" }
+, { value: "264", name: "OVL020 - TTC Hof Ter Burst" }
+, { value: "52", name: "OVL032 - TTC Merelbeke" }
+, { value: "55", name: "OVL039 - Sint-Niklase Tafeltennisclub" }
+, { value: "266", name: "OVL046 - TTC Melsele" }
+, { value: "267", name: "OVL047 - TTC Palaestra Deinze" }
+, { value: "268", name: "OVL052 - TTC Ronse" }
+, { value: "38", name: "OVL053 - TTC  St.-Joris Sleidinge" }
+, { value: "50", name: "OVL054 - TTC Triumph Ge Mo" }
+, { value: "57", name: "OVL056 - TTC Temse" }
+, { value: "269", name: "OVL059 - TTC  Maldegem" }
+, { value: "39", name: "OVL061 - TTC Sterke Stut Oosterzele VZW" }
+, { value: "235", name: "OVL080 - TTC Knal Deinze" }
+, { value: "270", name: "OVL082 - TTC Welfare Oudenaarde" }
+, { value: "40", name: "OVL088 - TTC Rooigem Gent VZW" }
+, { value: "271", name: "OVL092 - TTC Egmont Zottegem" }
+, { value: "41", name: "OVL093 - TTC Stekene VZW" }
+, { value: "42", name: "OVL095 - TTC De Pinte" }
+, { value: "43", name: "OVL096 - TTC Hamme" }
+, { value: "273", name: "OVL101 - TTC Kruibeke vzw" }
+, { value: "274", name: "OVL102 - TTC Het Netje Over Gent" }
+, { value: "275", name: "OVL103 - De Orchidee Wetteren" }
+, { value: "276", name: "OVL106 - TTC Madelon" }
+, { value: "277", name: "OVL107 - TTC Lobos-Lochristi" }
+, { value: "278", name: "OVL108 - TTC Schendelbeke" }
+, { value: "59", name: "OVL115 - TTC Zomergem" }
+, { value: "279", name: "OVL119 - TTC Ouwegem" }
+, { value: "280", name: "OVL123 - TTC Lede" }
+, { value: "56", name: "OVL125 - TTC Sint-Pauwels vzw" }
+, { value: "49", name: "OVL131 - TTC Eendracht Buggenhout" }
+, { value: "281", name: "OVL133 - TTC Grimminge" }
+, { value: "282", name: "OVL134 - TTC Erembodegem" }
+, { value: "46", name: "OVL138 - TTC Olsene vzw" }
+, { value: "47", name: "OVL142 - TTC Zele" }
+, { value: "283", name: "OVL144 - Tass" }
+, { value: "284", name: "OVL145 - TTC Denderleeuw 2001" }
+, { value: "735", name: "OVL146 - TTC Aaigem" }
+, { value: "753", name: "OVL148 - TTC Ninove" }
+, { value: "763", name: "OVL149 - TTC De Rijdt Brakel" }
+, { value: "181", name: "Vl-B000 - Individueel Vlaams-Brabant" }
+, { value: "6", name: "Vl-B005 - K.T.T.K Pingouin Leuven" }
+, { value: "153", name: "Vl-B161 - T.T.C. Den Hoek" }
+, { value: "5", name: "Vl-B182 - T.T. Groot-Bijgaarden" }
+, { value: "7", name: "Vl-B213 - T.T.C. Humbeek" }
+, { value: "12", name: "Vl-B218 - T.T.K Vilvo" }
+, { value: "3", name: "Vl-B225 - Hurricane T.T.W." }
+, { value: "4", name: "Vl-B234 - T.T.C. Meerdaal Leuven" }
+, { value: "195", name: "Vl-B247 - TTC Galmaarden" }
+, { value: "8", name: "Vl-B248 - P.P.K. Essenbeek" }
+, { value: "193", name: "Vl-B252 - T.T.C Lembeek" }
+, { value: "154", name: "Vl-B256 - Smash Overijse" }
+, { value: "772", name: "Vl-B283 - TTC Smash Dolfijn" }
+, { value: "137", name: "Vl-B293 - P.W. Diest" }
+, { value: "9", name: "Vl-B295 - T.T.C. Werchter" }
+, { value: "194", name: "Vl-B318 - VMS" }
+, { value: "746", name: "Vl-B330 - TTC Sukarti" }
+, { value: "176", name: "Vl-B331 - TT Blauwput Omnisport" }
+, { value: "11", name: "Vl-B334 - T.T.C. Tacko" }
+, { value: "256", name: "Vl-B336 - Pingkolo" }
+, { value: "768", name: "Vl-B338 - Cervus Schaffen" }
+, { value: "781", name: "Vl-B339 - TTC Drive Tienen" }
+, { value: "233", name: "VTTL - Buitenland" }
+, { value: "289" selected="", name: "VTTL - Individueel" }
+, { value: "286", name: "WVL000 - Individueel West-Vlaanderen" }
+, { value: "336", name: "WVL028 - T.T.C. Zwankendamme" }
+, { value: "206", name: "WVL034 - T.T.C. And Leie Lauwe" }
+, { value: "259", name: "WVL040 - T.T.C. Sobeka Zwevegem" }
+, { value: "335", name: "WVL045 - T.T.C. Drive Oostende" }
+, { value: "222", name: "WVL048 - TTC Roeselare" }
+, { value: "61", name: "WVL060 - T.T.C. The Charlies" }
+, { value: "62", name: "WVL067 - T.T.C. Easypay" }
+, { value: "334", name: "WVL071 - T.T.C. Nieuwpoort" }
+, { value: "254", name: "WVL072 - T.T.C. Eendracht Kuurne" }
+, { value: "234", name: "WVL085 - TTC Oostduinkerke" }
+, { value: "223", name: "WVL087 - T.T.C. Dino Brugge" }
+, { value: "67", name: "WVL094 - T.T.C. Wielsbeke" }
+, { value: "255", name: "WVL100 - T.T.C.  De woudpalet" }
+, { value: "64", name: "WVL104 - T.T.C. Bredene" }
+, { value: "332", name: "WVL105 - T.T.C. El Pozo Jabbeke" }
+, { value: "68", name: "WVL109 - T.T.C. Zandvoorde" }
+, { value: "224", name: "WVL110 - T.T.C. Jong Gullegem" }
+, { value: "258", name: "WVL112 - T.T.C. Menen" }
+, { value: "331", name: "WVL114 - T.T.C. Oudenburg" }
+, { value: "330", name: "WVL116 - T.T.C. Atanis Kortrijk" }
+, { value: "329", name: "WVL117 - T.T.C. St-Paulus" }
+, { value: "328", name: "WVL125 - T.T.C. Eernegem" }
+, { value: "327", name: "WVL126 - T.T.C. Tielt" }
+, { value: "326", name: "WVL128 - T.T.C. Waregem" }
+, { value: "751", name: "WVL129 - T.T.C. Heuvelland" }
+, { value: "237", name: "WVL133 - T.T.C. Eco Mundi Ieper" }
+, { value: "324", name: "WVL134 - T.T.C. Meulebeke" }
+, { value: "63", name: "WVL136 - TTC Izegem" }
+, { value: "323", name: "WVL137 - T.T.C. Knokke-Heist" }
+, { value: "241", name: "WVL138 - T.T.C. Sportline" }
+, { value: "322", name: "WVL139 - T.T.C. Oostkamp" }
+, { value: "321", name: "WVL141 - T.T.C. Rollegem" }
+, { value: "320", name: "WVL143 - T.T.C. St-Denijs" }
+, { value: "319", name: "WVL152 - T.T.C. Paletje Roeselare" }
+, { value: "318", name: "WVL154 - T.T.C. Free Time Zonnebeke" }
+, { value: "66", name: "WVL157 - T.T.C. Heule" }
+, { value: "65", name: "WVL158 - T.T.C. Damme" }
+, { value: "337", name: "WVL159 - T.T.C. Locomotief Gullegem" }
+, { value: "338", name: "WVL160 - T.T.C. Sorry Koekelare" }
+, { value: "745", name: "WVL161 - T.T.C. Smashing Smude" }
+, { value: "769", name: "wvl162 - T.T.C. KING KONG KASTER" }
+]

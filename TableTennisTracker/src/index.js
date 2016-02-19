@@ -7,15 +7,16 @@ var IndexRoute = require('react-router').IndexRoute;
 var Route = require('react-router').Route;
 
 var App = require('./App.js').App;
-var FilterMatches = require('./FilterMatches.js').FilterMatches;
-var Matches = require('./Matches.js').Matches;
+var SelectTeam = require('./SelectTeam.js').SelectTeam;
+var TeamOverview = require('./TeamOverview.js').TeamOverview;
+var GameDetail = require('./GameDetail.js').GameDetail;
 
 var Home = React.createClass({
   render: function() {
       return (
           <div>
-            <h3 className="text-success">TT Tracker</h3>
-            <FilterMatches />
+            <h3>TT Tracker</h3>
+            <SelectTeam />
           </div>
         );
     },
@@ -26,7 +27,8 @@ ReactDOM.render(
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
     </Route>
-    <Route path="Matches" component={Matches} />
+    <Route path="TeamOverview/:id" component={TeamOverview} />
+    <Route path="GameDetail/:id" component={GameDetail} />
   </Router>, 
   document.getElementById('root')
 );

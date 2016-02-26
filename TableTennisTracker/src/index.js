@@ -14,7 +14,7 @@ var GameDetail = require('./GameDetail.js').GameDetail;
 var Home = React.createClass({
   render: function() {
       return (
-          <div>
+          <div className="tthome">
             <h3>TT Tracker</h3>
             <SelectTeam />
           </div>

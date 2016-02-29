@@ -7,7 +7,7 @@ var Navbar = React.createClass({
   render: function() {
     return ( 
       <div className="container">
-        <h3>navbar</h3>
+        <h3><strong>Table Tennis Tracker</strong></h3>
       </div>
     );
   },

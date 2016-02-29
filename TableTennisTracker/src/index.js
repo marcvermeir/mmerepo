@@ -15,7 +15,6 @@ var Home = React.createClass({
   render: function() {
       return (
           <div className="tthome">
-            <h3>TT Tracker</h3>
             <SelectTeam />
           </div>
         );

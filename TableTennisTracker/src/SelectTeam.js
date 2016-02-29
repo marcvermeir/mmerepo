@@ -87,7 +87,9 @@ var SelectTeam = React.createClass({
                   onChange={that.weekChanged} />
         </div>
 
-        <Link to={"TeamOverview/0043225712"}>Go</Link>
+        <div className="row">
+          <Link to={"TeamOverview/0043225712"} className="btn btn-primary centered-select">Go</Link>
+        </div>
       </div>
       );
   },

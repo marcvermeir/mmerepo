@@ -40,15 +40,27 @@ var ttweeks = [
 
 var SelectTeam = React.createClass({
 
-  teamChanged : function(value) {
+  getTeams: function() {
+    return ttteams;
+  },
+
+  getDivisions: function() {
+    return ttdivisions;
+  },
+
+  getWeeks: function() {
+    return ttweeks;
+  },
+
+  teamChanged: function(value) {
     console.log(value);
   },
 
-  divisionChanged : function(value) {
+  divisionChanged: function(value) {
     console.log(value);
   },  
 
-  weekChanged : function(value) {
+  weekChanged: function(value) {
     console.log(value);
   },  
 
@@ -65,7 +77,7 @@ var SelectTeam = React.createClass({
         <div className="row">
           <Select name="ttteam"
                   value={defaultTeam}
-                  options={ttteams}
+                  options={that.getTeams()}
                   placeholder="Selecteer een team"
                   className="centered-select"
                   onChange={that.teamChanged} />
@@ -73,7 +85,7 @@ var SelectTeam = React.createClass({
         <div className="row">
           <Select name="ttdivision"
                   value={defaultDivision}
-                  options={ttdivisions}
+                  options={that.getDivisions()}
                   placeholder="Selecteer een divisie"
                   className="centered-select"
                   onChange={that.divisionChanged} />
@@ -81,14 +93,14 @@ var SelectTeam = React.createClass({
         <div className="row">
           <Select name="ttweek"
                   value={defaultWeek}
-                  options={ttweeks}
+                  options={that.getWeeks()}
                   placeholder="Selecteer een week"
                   className="centered-select"
                   onChange={that.weekChanged} />
         </div>
 
         <div className="row">
-          <Link to={"TeamOverview/0043225712"} className="btn btn-primary centered-select">Go</Link>
+          <Link to={"TeamOverview/0043225712"} className="btn btn-primary centered-select">Go!</Link>
         </div>
       </div>
       );

@@ -64,6 +64,10 @@ var SelectTeam = React.createClass({
     console.log(value);
   },  
 
+  componentDidMount: function() {
+    this.refs.ttteamSelect.focus();
+  },
+
   render: function() {
     var that = this;
 
@@ -76,6 +80,7 @@ var SelectTeam = React.createClass({
 
         <div className="row">
           <Select name="ttteam"
+                  ref="ttteamSelect"
                   value={defaultTeam}
                   options={that.getTeams()}
                   placeholder="Selecteer een team"
@@ -84,6 +89,7 @@ var SelectTeam = React.createClass({
         </div>
         <div className="row">
           <Select name="ttdivision"
+                  ref="ttdivisionSelect"
                   value={defaultDivision}
                   options={that.getDivisions()}
                   placeholder="Selecteer een divisie"
@@ -92,6 +98,7 @@ var SelectTeam = React.createClass({
         </div>
         <div className="row">
           <Select name="ttweek"
+                  ref="ttweekSelect"
                   value={defaultWeek}
                   options={that.getWeeks()}
                   placeholder="Selecteer een week"
@@ -100,7 +107,7 @@ var SelectTeam = React.createClass({
         </div>
 
         <div className="row">
-          <Link to={"TeamOverview/0043225712"} className="btn btn-primary centered-select">Go!</Link>
+          <Link to={"TeamOverview/0043225712"} className="btn btn-primary centered-select">Zoeken</Link>
         </div>
       </div>
       );

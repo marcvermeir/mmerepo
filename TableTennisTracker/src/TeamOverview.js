@@ -6,7 +6,7 @@ var Link = require('react-router').Link;
 var TeamOverview = React.createClass({
   render: function() {
     return ( 
-      <div className="container">
+      <div className="container ttapp">
         <h3>Team Overview {this.props.params.id}</h3>
 
         <Link to={"GameDetail/0043225712"}>Detail</Link>

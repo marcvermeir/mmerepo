@@ -8,7 +8,7 @@ var GameDetail = require('./GameDetail.js').GameDetail;
 var GameDetail = React.createClass({
   render: function() {
     return ( 
-      <div className="container">
+      <div className="container ttapp">
         <h3>Game Detail {this.props.params.id}</h3>
 
       

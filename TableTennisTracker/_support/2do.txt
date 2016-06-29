@@ -1,0 +1,4 @@
+
+> background image : to be replace by one without advertisements
+
+> background image should be (re)sized depending on device height & width ?!

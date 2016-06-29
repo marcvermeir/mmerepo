@@ -2,3 +2,6 @@
 * TabT API : http://api.frenoy.net/
 
 * react-select : https://github.com/JedWatson/react-select
+
+* https://github.com/doedje/jquery.soap
+* https://github.com/sparkbuzz/jQuery-xml2json

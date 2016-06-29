@@ -1,0 +1,98 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns1="http://api.frenoy.net/TabTAPI">
+   <SOAP-ENV:Body>
+      <ns1:GetDivisionsResponse>
+         <ns1:DivisionCount>13</ns1:DivisionCount>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2857</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 2D - Nationaal - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2858</ns1:DivisionId>
+            <ns1:DivisionName>SUPER - Nationaal - Dames</ns1:DivisionName>
+            <ns1:DivisionCategory>2</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>4</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2859</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 1 - Nationaal - Dames</ns1:DivisionName>
+            <ns1:DivisionCategory>2</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>4</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2860</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 2 - Nationaal - Dames</ns1:DivisionName>
+            <ns1:DivisionCategory>2</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>4</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2852</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 1A - Nationaal - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2853</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 1B - Nationaal - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2854</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 2A - Nationaal - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2855</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 2B - Nationaal - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2856</ns1:DivisionId>
+            <ns1:DivisionName>Afdeling 2C - Nationaal - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>1</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2861</ns1:DivisionId>
+            <ns1:DivisionName>Reeks A VTTL - Landelijk - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>2</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2862</ns1:DivisionId>
+            <ns1:DivisionName>Reeks B VTTL - Landelijk - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>2</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2863</ns1:DivisionId>
+            <ns1:DivisionName>Reeks C VTTL - Landelijk - Heren</ns1:DivisionName>
+            <ns1:DivisionCategory>1</ns1:DivisionCategory>
+            <ns1:Level>2</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+         <ns1:DivisionEntries>
+            <ns1:DivisionId>2864</ns1:DivisionId>
+            <ns1:DivisionName>Reeks A VTTL - Landelijk - Dames</ns1:DivisionName>
+            <ns1:DivisionCategory>2</ns1:DivisionCategory>
+            <ns1:Level>2</ns1:Level>
+            <ns1:MatchType>2</ns1:MatchType>
+         </ns1:DivisionEntries>
+      </ns1:GetDivisionsResponse>
+   </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

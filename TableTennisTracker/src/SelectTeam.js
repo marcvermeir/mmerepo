@@ -5,6 +5,7 @@ var Link = require('react-router').Link;
 var Select = require('react-select');
 
 var $ = require('jquery');
+var x2js = require('jquery-xml2json');
 var JQuerySoap = require('./jquery.soap.js');
 
 var TeamOverview = require('./TeamOverview.js').TeamOverview;
@@ -45,22 +46,20 @@ var SelectTeam = React.createClass({
 
   getTeams: function() {
 
-
-
-    return ttteams;
-  },
-
-  getDivisions: function() {
-
     $.soap({
-        url: 'http://api.vttl.be/0.7/?wsdl', 
-        /* url: 'http://api.vttl.be/0.7/index.php?s=vttl', */
+        /* url: 'http://api.vttl.be/0.7/?wsdl', */
+        url: 'http://api.vttl.be/0.7/index.php?s=vttl',
         type: 'POST',
-        method: 'GetDivisions',
+        method : 'GetClubs',
+        namespaceQualifier: '',
+        namespaceURL : 'http://api.frenoy.net/TabTAPI',   
+        noPrefix : true,
+        elementName : 'GetClubs',
         appendMethodToURL: false,
         soap12: false,
         context: document.body,
         data: {
+          Season : "16",
         },
 
         success: function (soapResponse) {
@@ -70,7 +69,47 @@ var SelectTeam = React.createClass({
             // or soapResponse.toXML() to get XML DOM
 
             // console.log(soapResponse);
+            /* console.log(soapResponse.toXML()); */
+            /* console.log(soapResponse.toJSON()); */
+            console.log(x2js.toJSON(soapResponse));
 
+        },
+        error: function (SOAPResponse) {
+            // show error
+            console.log(SOAPResponse);
+        }
+    });
+
+    return ttteams;
+  },
+
+  getDivisions: function() {
+
+    $.soap({
+        /* url: 'http://api.vttl.be/0.7/?wsdl', */
+        url: 'http://api.vttl.be/0.7/index.php?s=vttl',
+        type: 'POST',
+        method : 'GetDivisions',
+        namespaceQualifier: '',
+        namespaceURL : 'http://api.frenoy.net/TabTAPI',   
+        noPrefix : true,
+        elementName : 'GetDivisions',
+        appendMethodToURL: false,
+        soap12: false,
+        context: document.body,
+        data: {
+          Season : "16",
+        },
+
+        success: function (soapResponse) {
+            // do stuff with soapResponse
+            // if you want to have the response as JSON use soapResponse.toJSON();
+            // or soapResponse.toString() to get XML string
+            // or soapResponse.toXML() to get XML DOM
+
+            // console.log(soapResponse);
+            console.log(soapResponse.toXML());
+            /* console.log(soapResponse.toJSON()); */
         },
         error: function (SOAPResponse) {
             // show error

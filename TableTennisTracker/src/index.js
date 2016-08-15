@@ -7,7 +7,7 @@ var IndexRoute = require('react-router').IndexRoute;
 var Route = require('react-router').Route;
 
 var App = require('./App.js').App;
-var SelectTeam = require('./SelectTeam.js').SelectTeam;
+var SelectTeamContainer = require('./SelectTeamContainer.js').SelectTeamContainer;
 var TeamOverview = require('./TeamOverview.js').TeamOverview;
 var GameDetail = require('./GameDetail.js').GameDetail;
 
@@ -15,7 +15,7 @@ var Home = React.createClass({
   render: function() {
       return (
           <div className="tthome">
-            <SelectTeam />
+            <SelectTeamContainer />
           </div>
         );
     },

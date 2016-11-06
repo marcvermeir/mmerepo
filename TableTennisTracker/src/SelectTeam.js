@@ -4,46 +4,18 @@ var ReactDOM = require('react-dom');
 var Link = require('react-router').Link;
 var Select = require('react-select');
 
+<<<<<<< HEAD
 var $ = require('jquery');
 var xml2json = require('jquery-xml2json').xml2json;
 var JQuerySoap = require('./jquery.soap.js');
+=======
+>>>>>>> 5dba2e75405cebffa22a5eb27a6307922b2ab28f
 
 var TeamOverview = require('./TeamOverview.js').TeamOverview;
 
-//
-var ttteams = [
-   { value: "0",    label: "Alle" }
- , { value: "287",  label: "A000 - Individueel Antwerpen" }
- , { value: "34",   label: "A003 - KTTC Salamander Mechelen" }
- , { value: "187",  label: "A008 - TTC Ekerse" }    
-];
-
-var ttdivisions = [
-  { value: "2378", label: "Super Afdeling - Heren" },
-  { value: "2257", label: "Afdeling 1A - Nationaal - Heren" },
-  { value: "2258", label: "Afdeling 1B - Nationaal - Heren" },
-  { value: "2259", label: "Afdeling 2A - Nationaal - Heren" }
-];
-
-var ttweeks = [
-  { value: "1", label: "Week 1" },
-  { value: "2", label: "Week 2" },
-  { value: "3", label: "Week 3" },
-  { value: "4", label: "Week 4" },
-  { value: "5", label: "Week 5" },
-  { value: "6", label: "Week 6" },
-  { value: "7", label: "Week 7" },
-  { value: "8", label: "Week 8" },
-  { value: "9", label: "Week 9" },
-  { value: "10", label: "Week 10" },
-  { value: "11", label: "Week 11" },
-  { value: "12", label: "Week 12" }    
-];
-
-//
-
 var SelectTeam = React.createClass({
 
+<<<<<<< HEAD
   getTeams: function() {
 
 
@@ -103,6 +75,8 @@ var SelectTeam = React.createClass({
     return ttweeks;
   },
 
+=======
+>>>>>>> 5dba2e75405cebffa22a5eb27a6307922b2ab28f
   teamChanged: function(value) {
     console.log(value);
   },
@@ -122,9 +96,9 @@ var SelectTeam = React.createClass({
   render: function() {
     var that = this;
 
-    var defaultTeam = ttteams[0].value;
-    var defaultDivision = ttdivisions[1].value;
-    var defaultWeek = ttweeks[0].value;
+    var defaultTeam = this.props.teams[0].value;
+    var defaultDivision = this.props.divisions[1].value;
+    var defaultWeek = this.props.weeks[0].value;
 
     return ( 
       <div className="container">
@@ -133,7 +107,7 @@ var SelectTeam = React.createClass({
           <Select name="ttteam"
                   ref="ttteamSelect"
                   value={defaultTeam}
-                  options={that.getTeams()}
+                  options={that.props.teams}
                   placeholder="Selecteer een team"
                   className="centered-select"
                   onChange={that.teamChanged} />
@@ -142,7 +116,7 @@ var SelectTeam = React.createClass({
           <Select name="ttdivision"
                   ref="ttdivisionSelect"
                   value={defaultDivision}
-                  options={that.getDivisions()}
+                  options={that.props.divisions}
                   placeholder="Selecteer een divisie"
                   className="centered-select"
                   onChange={that.divisionChanged} />
@@ -151,7 +125,7 @@ var SelectTeam = React.createClass({
           <Select name="ttweek"
                   ref="ttweekSelect"
                   value={defaultWeek}
-                  options={that.getWeeks()}
+                  options={that.props.weeks}
                   placeholder="Selecteer een week"
                   className="centered-select"
                   onChange={that.weekChanged} />

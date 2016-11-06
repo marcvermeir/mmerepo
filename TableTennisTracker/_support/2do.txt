@@ -2,3 +2,7 @@
 > background image : to be replace by one without advertisements
 
 > background image should be (re)sized depending on device height & width ?!
+
+> service api URL's should be fetched from some kind of configuration aka JSon file ?!
+
+> SelectTealmContainer.js : parameter 'Season' should be derived dynamically ?!

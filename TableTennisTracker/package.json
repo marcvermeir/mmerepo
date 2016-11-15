@@ -39,7 +39,6 @@
   "dependencies": {
     "history": "^1.17.0",
     "jquery": "^2.2.1",
-    "jquery-xml2json": "0.0.8",
     "react": "^0.14.0",
     "react-addons-css-transition-group": "^0.14.6",
     "react-dom": "^0.14.0",

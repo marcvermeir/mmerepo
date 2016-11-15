@@ -4,21 +4,15 @@ var ReactDOM = require('react-dom');
 var Link = require('react-router').Link;
 var Select = require('react-select');
 
-<<<<<<< HEAD
 var $ = require('jquery');
-var xml2json = require('jquery-xml2json').xml2json;
+/* var xml2json = require('jquery-xml2json').xml2json; */
 var JQuerySoap = require('./jquery.soap.js');
-=======
->>>>>>> 5dba2e75405cebffa22a5eb27a6307922b2ab28f
 
 var TeamOverview = require('./TeamOverview.js').TeamOverview;
 
 var SelectTeam = React.createClass({
 
-<<<<<<< HEAD
   getTeams: function() {
-
-
 
     return ttteams;
   },
@@ -75,8 +69,6 @@ var SelectTeam = React.createClass({
     return ttweeks;
   },
 
-=======
->>>>>>> 5dba2e75405cebffa22a5eb27a6307922b2ab28f
   teamChanged: function(value) {
     console.log(value);
   },

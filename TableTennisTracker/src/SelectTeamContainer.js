@@ -3,7 +3,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var $ = require('jquery');
-var x2js = require('jquery-xml2json');
+
+/* var x2js = require('jquery-xml2json'); */
+
 var JQuerySoap = require('./jquery.soap.js');
 var SelectTeam = require('./SelectTeam.js').SelectTeam;
 //
@@ -43,15 +45,20 @@ var ttweeks = [
 
 var SelectTeamContainer = React.createClass({
 
+  statics : {
+    URL : 'http://api.vttl.be/0.7/index.php?s=vttl',
+    WSDL : 'http://api.vttl.be/0.7/?wsdl',
+    NAMESPACEURL : 'http://api.frenoy.net/TabTAPI',
+  },
+
   getTeams: function() {
 
     $.soap({
-        /* url: 'http://api.vttl.be/0.7/?wsdl', */
-        url: 'http://api.vttl.be/0.7/index.php?s=vttl',
+        url: SelectTeamContainer.URL,
         type: 'POST',
         method : 'GetClubs',
         namespaceQualifier: '',
-        namespaceURL : 'http://api.frenoy.net/TabTAPI',   
+        namespaceURL : SelectTeamContainer.NAMESPACEURL,   
         noPrefix : true,
         elementName : 'GetClubs',
         appendMethodToURL: false,
@@ -72,6 +79,8 @@ var SelectTeamContainer = React.createClass({
             /* console.log(soapResponse.toJSON()); */
             /* console.log(x2js.toJSON(soapResponse));*/
             /* console.log($.xml2json(soapResponse)); */
+            console.log(soapResponse.toXML());
+
 
         },
         error: function (SOAPResponse) {
@@ -86,12 +95,11 @@ var SelectTeamContainer = React.createClass({
   getDivisions: function() {
 
     $.soap({
-        /* url: 'http://api.vttl.be/0.7/?wsdl', */
-        url: 'http://api.vttl.be/0.7/index.php?s=vttl',
+        url: SelectTeamContainer.URL,
         type: 'POST',
         method : 'GetDivisions',
         namespaceQualifier: '',
-        namespaceURL : 'http://api.frenoy.net/TabTAPI',   
+        namespaceURL : SelectTeamContainer.NAMESPACEURL,   
         noPrefix : true,
         elementName : 'GetDivisions',
         appendMethodToURL: false,

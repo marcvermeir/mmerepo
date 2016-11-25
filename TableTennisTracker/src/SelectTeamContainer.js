@@ -4,9 +4,12 @@ var ReactDOM = require('react-dom');
 
 var $ = require('jquery');
 
-/* var x2js = require('jquery-xml2json'); */
+/* var x2js = require('X2JS').X2JS; */
+/* var JQueryXML2JSON = require('./jquery.xml2json.js').xml2json; */
+var X2J = require('./xmlToJSON.js');
 
 var JQuerySoap = require('./jquery.soap.js');
+
 var SelectTeam = require('./SelectTeam.js').SelectTeam;
 //
 var ttteams = [
@@ -74,18 +77,27 @@ var SelectTeamContainer = React.createClass({
             // or soapResponse.toString() to get XML string
             // or soapResponse.toXML() to get XML DOM
 
-            // console.log(soapResponse);
+            /* console.log(soapResponse.toXML()); */
+            console.log(X2J.parseString(soapResponse.toString()))
+
             /* console.log(soapResponse.toXML()); */
             /* console.log(soapResponse.toJSON()); */
+            /* var json = $.xml2json(soapResponse);
+
+
             /* console.log(x2js.toJSON(soapResponse));*/
             /* console.log($.xml2json(soapResponse)); */
-            console.log(soapResponse.toXML());
 
+            /*
+            var xjs = new X2JS();
+            var jsn = xjs.xml_str2json(soapResponse.toXML());
+            console.log(jsn);
+            */
 
         },
         error: function (SOAPResponse) {
             // show error
-            console.log(SOAPResponse);
+            alert(SOAPResponse);
         }
     });
 
@@ -116,12 +128,12 @@ var SelectTeamContainer = React.createClass({
             // or soapResponse.toXML() to get XML DOM
 
             // console.log(soapResponse);
-            console.log(soapResponse.toXML());
+            /* console.log(soapResponse.toXML()); */
             /* console.log(soapResponse.toJSON()); */
         },
         error: function (SOAPResponse) {
             // show error
-            console.log(SOAPResponse);
+            alert(SOAPResponse);
         }
     });
 

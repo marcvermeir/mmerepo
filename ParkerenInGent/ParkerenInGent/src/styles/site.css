@@ -1,0 +1,92 @@
+﻿body {
+    margin: 20px;
+}
+
+#main {
+    width: 1024px;
+    margin: 10px auto;
+}
+
+ul {
+    /* to avoid dots in listitems*/
+    list-style-type: none;
+}
+
+parking {
+    /* some comment
+        */
+
+    float: left;
+    margin: 10px;
+    background-color: darkblue;
+    color: white;
+    font-size: 18px;
+    width: 180px;
+    height: 180px;
+    border: 1px solid darkblue;
+    text-align: center;
+}
+
+
+parking:hover{
+    background-color: #4b5899;
+    cursor: pointer;
+}
+
+.warning {
+    background-color: darkorange;
+    border: 1px solid #d57000;
+}
+
+.warning:hover{
+    background-color: #c76400;
+}
+
+.full {
+    background-color: #C70000;
+    border: 1px solid #d51316;
+}
+
+.full:hover{
+    background-color: #b11412;
+}
+
+.unknown {
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
+.unknown:hover{
+    background-color: #000000;
+}
+
+.parking-p{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+/* 
+    0. important
+    1. inline styles
+    2. ids
+    3. class
+    4. elements
+
+    parking --> 0010
+    select --> 10001
+ */
+
+.form-control {
+    width: 300px;
+}
+
+.form-container{
+    float:left;
+    margin: 0 10px 0 0 ;
+}
+
+/*
+select{
+    width: 300px; 
+}
+*/

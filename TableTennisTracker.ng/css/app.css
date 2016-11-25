@@ -8,6 +8,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+select:focus option.holder {
+  display: none;
+}
+
 .centered-select {
   display: block;
   width: 300px;
@@ -20,4 +24,3 @@ body {
 
     height: 627px; /* 375 */   
 }
-

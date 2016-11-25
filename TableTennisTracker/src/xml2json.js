@@ -582,4 +582,6 @@
       return VERSION;
     };  
   }
-}))
+}));
+
+module.exports.X2JS = root.X2JS;

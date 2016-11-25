@@ -5,22 +5,25 @@ var Link = require('react-router').Link;
 var Select = require('react-select');
 
 var $ = require('jquery');
+
 /* var xml2json = require('jquery-xml2json').xml2json; */
-var JQuerySoap = require('./jquery.soap.js');
+/* var JQuerySoap = require('./jquery.soap.js'); */
 
 var TeamOverview = require('./TeamOverview.js').TeamOverview;
 
 var SelectTeam = React.createClass({
 
+  /*
   getTeams: function() {
 
     return ttteams;
   },
+  */
 
+  /*
   getDivisions: function() {
 
     $.soap({
-        /* url: 'http://api.vttl.be/0.7/?wsdl', */
         url: 'http://api.vttl.be/0.7/index.php?s=vttl',
         type: 'POST',
         method: 'GetDivisions',
@@ -31,43 +34,21 @@ var SelectTeam = React.createClass({
         },
 
         success: function (soapResponse) {
-            // do stuff with soapResponse
-            // if you want to have the response as JSON use soapResponse.toJSON();
-            // or soapResponse.toString() to get XML string
-            // or soapResponse.toXML() to get XML DOM
-
-            console.log(soapResponse);
-
-            //todo: check : https://www.npmjs.com/package/xml2js
-
 
         },
         error: function (SOAPResponse) {
-            // show error
-            console.log(SOAPResponse);
         }
     });
 
     return ttdivisions;
   },
+  */
 
+  /*
   getWeeks: function() {
-
-   /* var params = new SOAPClientParameters(); */
-
-    /*
-    var url = 'http://api.vttl.be/0.7/?wsdl';
-    // var args = {name: 'value'};
-    soap.createClient(url, function(err, client) {
-        client.GetSeasons(null, function(err, result) {
-            console.log(result);
-        });
-    });
-    
-    */
-  
     return ttweeks;
   },
+  */
 
   teamChanged: function(value) {
     console.log(value);

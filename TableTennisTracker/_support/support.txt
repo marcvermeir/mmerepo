@@ -1,6 +1,12 @@
 
 *** TabT API : http://api.frenoy.net/
 
+*** FIXES :
+-- x2js.js : https://forum.fatfractal.com/forum/index.php?topic=22.0
+
+
+
+
 ** How to deploy a static webapp 2 HEROKU : 
 -- https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489
 -- http://blog.teamtreehouse.com/deploy-static-site-heroku

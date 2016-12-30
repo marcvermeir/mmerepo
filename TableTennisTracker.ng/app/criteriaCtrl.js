@@ -38,4 +38,8 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location) {
     $scope.ttteams = ttteams;
     $scope.ttdivisions = ttdivisions;
     $scope.ttweeks = ttweeks;
+
+    $scope.go = function() {
+      $location.path('/matches'); 
+    };
 });   

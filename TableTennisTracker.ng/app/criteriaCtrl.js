@@ -35,9 +35,89 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location) {
       { value: "16", label: "Week 16" }
     ];
 
-    $scope.ttteams = ttteams;
-    $scope.ttdivisions = ttdivisions;
-    $scope.ttweeks = ttweeks;
+    // $scope.ttteams = ttteams;
+    // $scope.ttdivisions = ttdivisions;
+    // $scope.ttweeks = ttweeks;
+
+    $scope.fetchTeams = function (argument) {
+
+      //TODO: >> 'constants' ?!
+      var URL = 'http://api.vttl.be/0.7/index.php?s=vttl';
+      var WSDL = 'http://api.vttl.be/0.7/?wsdl';
+      var NAMESPACEURL = 'http://api.frenoy.net/TabTAPI';
+
+      $.soap({
+        url: URL,
+        type: 'POST',
+        method : 'GetClubs',
+        namespaceQualifier: '',
+        namespaceURL : NAMESPACEURL,   
+        noPrefix : true,
+        elementName : 'GetClubs',
+        appendMethodToURL: false,
+        soap12: false,
+        context: document.body,
+        data: {
+          //TODO: quid the season parameter ?!
+          Season : "16",
+        },
+        success: function (soapResponse) {
+            // var jsn = soapResponse.toJSON();
+            var txt = soapResponse.toString();
+            alert(txt);
+        },
+        error: function (soapResponse) {
+            alert(soapResponse);
+        }
+      });
+
+      //TODO: replace this result with returned values of SOAP service
+      return ttteams;
+    };
+
+    $scope.fetchDivisions = function (argument) {
+
+      //TODO: >> 'constants' ?!
+      var URL = 'http://api.vttl.be/0.7/index.php?s=vttl';
+      var WSDL = 'http://api.vttl.be/0.7/?wsdl';
+      var NAMESPACEURL = 'http://api.frenoy.net/TabTAPI';
+
+      $.soap({
+        url: URL,
+        type: 'POST',
+        method : 'GetDivisions',
+        namespaceQualifier: '',
+        namespaceURL : NAMESPACEURL,   
+        noPrefix : true,
+        elementName : 'GetDivisions',
+        appendMethodToURL: false,
+        soap12: false,
+        context: document.body,
+        data: {
+          //TODO: quid the season parameter ?!          
+          Season : "16",
+        },
+        success: function (soapResponse) {
+            // var jsn = soapResponse.toJSON();
+            var txt = soapResponse.toString();
+            alert(txt);
+        },
+        error: function (soapResponse) {
+            alert(soapResponse);
+        }
+      });
+
+      //TODO: replace this result with returned values of SOAP service
+      return ttdivisions;
+    };
+
+    $scope.fetchWeeks = function (argument) {
+      return ttweeks;
+    };
+
+    $scope.ttteams = $scope.fetchTeams();
+    $scope.ttdivisions = $scope.fetchDivisions();
+    $scope.ttweeks = $scope.fetchWeeks();
 
     $scope.go = function() {
       $location.path('/matches'); 

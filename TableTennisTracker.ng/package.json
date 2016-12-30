@@ -33,6 +33,7 @@
     "bootstrap": "^3.3.7",
     "fontawesome": "^4.5.0",
     "history": "^1.17.0",
-    "jquery": "^2.2.1"
+    "jquery": "^2.2.1",
+    "jquery-xml2json": "0.0.8"
   }
 }

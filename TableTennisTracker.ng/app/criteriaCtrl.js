@@ -2,12 +2,14 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location, Dat
     
     $scope.criteria = { selectedTeam : '', selectedDivision : '', selectedWeek : '' };
 
+    /*
     var ttteams = [
       { value: "0",    label: "Alle" },
       { value: "287",  label: "A000 - Individueel Antwerpen" },
       { value: "34",   label: "A003 - KTTC Salamander Mechelen" },
       { value: "187",  label: "A008 - TTC Ekerse" }    
     ];
+    */
 
     var ttdivisions = [
       { value: "2378", label: "Super Afdeling - Heren" },
@@ -43,7 +45,10 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location, Dat
 
     $scope.fetchTeams = function () {
 
-      return DataService.GetTeams('16');
+      //TODO: define 'season' parameter :
+      var season = '16';
+
+      return DataService.getTeams(season);
 
       /*
       //TODO: >> 'constants' ?!

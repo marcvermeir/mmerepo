@@ -8,14 +8,18 @@
 
         var obj = {};
 
+        /*
         var ttteams = [
             { value: "0",    label: "Alle" },
             { value: "287",  label: "A000 - Individueel Antwerpen" },
             { value: "34",   label: "A003 - KTTC Salamander Mechelen" },
             { value: "187",  label: "A008 - TTC Ekerse" }    
         ];
+        */
 
-        obj.GetTeams = function(season) {
+        obj.getTeams = function(season) {
+
+            var result = {};
 
             $.soap({ url: URL,
                         type: 'POST',
@@ -27,22 +31,23 @@
                         appendMethodToURL: false,
                         soap12: false,
                         context: document.body,
-                        data: {
-                                //TODO: quid the season parameter ?!
-                                Season : season,
+                        data: { Season : season,
                         },
-                        success: function (soapResponse) {
-                            var jsn = soapResponse.toJSON();
-                            var txt = soapResponse.toString();
-                                // alert(txt);
+                        success: function (SOAPResponse) {
+                            var json = SOAPResponse.toJSON();
+                            if (json) {
+                                var clubCount = parseInt(json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetClubsResponse']['ns1:ClubCount']);
+                                var clubEntries = json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetClubsResponse']['ns1:ClubEntries'];
+
+                                result = { 'ClubCount' : clubCount, 'ClubEntries' : clubEntries };
+                            }
                         },
-                        error: function (soapResponse) {
-                            alert(soapResponse);
+                        error: function (SOAPResponse) {
+                            //TODO: error handling ?!
                         }
                     });
 
-            return ttteams;
-
+            return result;
         };
 
         return obj;

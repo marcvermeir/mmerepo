@@ -1,4 +1,4 @@
-app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location) {
+app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location, DataService) {
     
     $scope.criteria = { selectedTeam : '', selectedDivision : '', selectedWeek : '' };
 
@@ -39,8 +39,13 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location) {
     // $scope.ttdivisions = ttdivisions;
     // $scope.ttweeks = ttweeks;
 
-    $scope.fetchTeams = function (argument) {
+    // https://danmartensen.svbtle.com/data-model-architecture-in-angular
 
+    $scope.fetchTeams = function () {
+
+      return DataService.GetTeams('16');
+
+      /*
       //TODO: >> 'constants' ?!
       var URL = 'http://api.vttl.be/0.7/index.php?s=vttl';
       var WSDL = 'http://api.vttl.be/0.7/?wsdl';
@@ -70,12 +75,10 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location) {
             alert(soapResponse);
         }
       });
-
-      //TODO: replace this result with returned values of SOAP service
-      return ttteams;
+      */
     };
 
-    $scope.fetchDivisions = function (argument) {
+    $scope.fetchDivisions = function () {
 
       //TODO: >> 'constants' ?!
       var URL = 'http://api.vttl.be/0.7/index.php?s=vttl';
@@ -111,7 +114,7 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location) {
       return ttdivisions;
     };
 
-    $scope.fetchWeeks = function (argument) {
+    $scope.fetchWeeks = function () {
       return ttweeks;
     };
 

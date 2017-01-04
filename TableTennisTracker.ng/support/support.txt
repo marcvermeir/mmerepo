@@ -1,2 +1,6 @@
 
-** HTML Select : http://odetocode.com/blogs/scott/archive/2013/06/19/using-ngoptions-in-angularjs.aspx
+** AngularJS Model Architecture : 
+-- // https://danmartensen.svbtle.com/data-model-architecture-in-angular
+
+** HTML Select : 
+-- http://odetocode.com/blogs/scott/archive/2013/06/19/using-ngoptions-in-angularjs.aspx

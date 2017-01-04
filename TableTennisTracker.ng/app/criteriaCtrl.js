@@ -11,12 +11,14 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location, Dat
     ];
     */
 
+    /*
     var ttdivisions = [
       { value: "2378", label: "Super Afdeling - Heren" },
       { value: "2257", label: "Afdeling 1A - Nationaal - Heren" },
       { value: "2258", label: "Afdeling 1B - Nationaal - Heren" },
       { value: "2259", label: "Afdeling 2A - Nationaal - Heren" }
     ];
+    */
 
     var ttweeks = [
       { value: "1", label: "Week 1" },
@@ -85,6 +87,12 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location, Dat
 
     $scope.fetchDivisions = function () {
 
+      //TODO: define 'season' parameter :
+      var season = '16';
+
+      return DataService.getDivisions(season);
+
+      /*
       //TODO: >> 'constants' ?!
       var URL = 'http://api.vttl.be/0.7/index.php?s=vttl';
       var WSDL = 'http://api.vttl.be/0.7/?wsdl';
@@ -107,16 +115,14 @@ app.controller('criteriaCtrl', function ($scope, $modal, $filter, $location, Dat
         },
         success: function (soapResponse) {
             // var jsn = soapResponse.toJSON();
-            var txt = soapResponse.toString();
-            alert(txt);
         },
         error: function (soapResponse) {
-            alert(soapResponse);
         }
       });
 
       //TODO: replace this result with returned values of SOAP service
       return ttdivisions;
+      */
     };
 
     $scope.fetchWeeks = function () {

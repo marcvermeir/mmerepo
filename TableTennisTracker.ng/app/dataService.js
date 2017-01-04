@@ -17,6 +17,15 @@
         ];
         */
 
+        /*
+        var ttdivisions = [
+            { value: "2378", label: "Super Afdeling - Heren" },
+            { value: "2257", label: "Afdeling 1A - Nationaal - Heren" },
+            { value: "2258", label: "Afdeling 1B - Nationaal - Heren" },
+            { value: "2259", label: "Afdeling 2A - Nationaal - Heren" }
+        ];
+        */
+
         obj.getTeams = function(season) {
 
             var result = {};
@@ -31,19 +40,54 @@
                         appendMethodToURL: false,
                         soap12: false,
                         context: document.body,
-                        data: { Season : season,
-                        },
+                        data: { Season : season },
                         success: function (SOAPResponse) {
                             var json = SOAPResponse.toJSON();
                             if (json) {
-                                var clubCount = parseInt(json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetClubsResponse']['ns1:ClubCount']);
-                                var clubEntries = json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetClubsResponse']['ns1:ClubEntries'];
+                                var count = parseInt(json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetClubsResponse']['ns1:ClubCount']);
+                                var entries = json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetClubsResponse']['ns1:ClubEntries'];
 
-                                result = { 'ClubCount' : clubCount, 'ClubEntries' : clubEntries };
+                                result = { 'Count' : count, 'Entries' : entries };
                             }
                         },
                         error: function (SOAPResponse) {
                             //TODO: error handling ?!
+                            var json = SOAPResponse.toJSON();
+                            alert(json);
+                        }
+                    });
+
+            return result;
+        };
+
+        obj.getDivisions = function(season) {
+
+            var result = {};
+
+            $.soap({ url: URL,
+                        type: 'POST',
+                        method : 'GetDivisions',
+                        namespaceQualifier: '',
+                        namespaceURL : NAMESPACEURL,   
+                        noPrefix : true,
+                        elementName : 'GetDivisions',
+                        appendMethodToURL: false,
+                        soap12: false,
+                        context: document.body,
+                        data: { Season : season },
+                        success: function (SOAPResponse) {
+                            var json = SOAPResponse.toJSON();
+                            if (json) {
+                                var count = parseInt(json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetDivisionsResponse']['ns1:DivisionCount']);
+                                var entries = json['#document']['SOAP-ENV:Envelope']['SOAP-ENV:Body']['ns1:GetDivisionsResponse']['ns1:DivisionEntries'];
+
+                                result = { 'Count' : count, 'Entries' : entries };
+                            }                            
+                        },
+                        error: function (SOAPResponse) {
+                            //TODO: error handling ?!
+                            var json = SOAPResponse.toJSON();
+                            alert(json);
                         }
                     });
 

@@ -1,4 +1,12 @@
 
+***** check relation TEAM (CLUB) -- DIVISIE (AFDELING) ? : http://api.vttl.be/0.7/?wsdl
+
+
+
+*** replace the 'default' select/option approach by the 'CHOSEN' implementation :
+-- https://harvesthq.github.io/chosen/
+
+
 ** add a webpack template with automatic 'build' .. bundling & minification of javascript
 
 * add the toastr library 4 'toastr' notifications
@@ -10,5 +18,10 @@
 
 
 * avoid error "Failed to load resource: the server responded with a status of 404 (Not Found)" ... as result of the request 4 (missing) 'favicon.ico'
+
+
+
+
+///
 
 ? alternative 4 soap : https://github.com/andrewmcgivery/angular-soap ??

@@ -1,9 +1,13 @@
-app.controller('criteriaCtrl', function($scope, $modal, $filter, $location, VTTLAPI) {
+app.controller("criteriaCtrl", function($scope, $modal, $filter, $location, VTTLAPI, sharedService) {
 
     $scope.criteria = { selectedTeam: '', selectedDivision: '', selectedWeek: '' };
 
-    //TODO: define 'season' parameter :
-    var season = '17'; // aka Season 2016-2017
+    $scope.go = function() {
+    
+      sharedService.setCriteria($scope.criteria);
+
+      $location.path('/matches');
+    };
 
     $scope.fetchTeams = function(season) {
         'use strict';
@@ -163,23 +167,26 @@ app.controller('criteriaCtrl', function($scope, $modal, $filter, $location, VTTL
         $scope.ttweeks = ttweeks;
     };
 
-    $scope.go = function() {
-        var path = "/matches?criteria=" + JSON.stringify($scope.criteria);
-        $location.path(path);
-    };
-
     $scope.teamChanged = function() {
         var selectedTeam = $scope.criteria.selectedTeam;
         if (selectedTeam) {
             $scope.fetchClubTeams(selectedTeam, season);
             if ($scope.ttdivisions.length == 0) {
-              $scope.fetchDivisions(season);
+                $scope.fetchDivisions(season);
             }
         } else
             $scope.fetchDivisions(season);
     };
 
-    $scope.fetchDivisions(season);
-    $scope.fetchTeams(season);
-    $scope.fetchWeeks();
+    $scope.initialize = function() {
+
+      //TODO: define 'season' parameter :
+      var season = '17'; // aka Season 2016-2017
+
+      $scope.fetchDivisions(season);
+      $scope.fetchTeams(season);
+      $scope.fetchWeeks();
+    };
+
+    $scope.initialize();
 });

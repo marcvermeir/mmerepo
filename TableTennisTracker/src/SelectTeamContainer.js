@@ -6,6 +6,7 @@ var $ = require('jquery');
 var x2js = require('jquery-xml2json');
 var JQuerySoap = require('./jquery.soap.js');
 var SelectTeam = require('./SelectTeam.js').SelectTeam;
+
 //
 var ttteams = [
    { value: "0",    label: "Alle" }
@@ -19,6 +20,10 @@ var ttdivisions = [
   { value: "2257", label: "Afdeling 1A - Nationaal - Heren" },
   { value: "2258", label: "Afdeling 1B - Nationaal - Heren" },
   { value: "2259", label: "Afdeling 2A - Nationaal - Heren" }
+];
+
+var ttclubteams = [
+{ value: "9999", label: "dummy clubteam" },
 ];
 
 var ttweeks = [
@@ -108,7 +113,7 @@ var SelectTeamContainer = React.createClass({
             // or soapResponse.toXML() to get XML DOM
 
             // console.log(soapResponse);
-            console.log(soapResponse.toXML());
+            // console.log(soapResponse.toXML());
             /* console.log(soapResponse.toJSON()); */
         },
         error: function (SOAPResponse) {
@@ -120,6 +125,47 @@ var SelectTeamContainer = React.createClass({
     return ttdivisions;
   },
 
+  getClubTeams: function() {
+
+    $.soap({
+        /* url: 'http://api.vttl.be/0.7/?wsdl', */
+        url: 'http://api.vttl.be/0.7/index.php?s=vttl',
+        type: 'POST',
+        method : 'GetClubTeams',
+        namespaceQualifier: '',
+        namespaceURL : 'http://api.frenoy.net/TabTAPI',   
+        noPrefix : true,
+        elementName : 'GetClubTeams',
+        appendMethodToURL: false,
+        soap12: false,
+        context: document.body,
+        data: {
+          Club : "A008",
+          Season : "16",
+        },
+
+        success: function (soapResponse) {
+            // do stuff with soapResponse
+            // if you want to have the response as JSON use soapResponse.toJSON();
+            // or soapResponse.toString() to get XML string
+            // or soapResponse.toXML() to get XML DOM
+
+            // console.log(soapResponse);
+            /* console.log(soapResponse.toXML()); */
+            /* console.log(soapResponse.toJSON()); */
+            /* console.log(x2js.toJSON(soapResponse));*/
+            /* console.log($.xml2json(soapResponse)); */
+            console.log(SOAPResponse.toXML());
+
+        },
+        error: function (SOAPResponse) {
+            // show error
+            console.log(SOAPResponse.toXML());
+        }
+    });
+    return ttclubteams;
+  },
+
   getWeeks: function() {
 
     return ttweeks;
@@ -127,6 +173,9 @@ var SelectTeamContainer = React.createClass({
 
   render: function() {
     var that = this;
+
+    /* .. */
+    var ct = that.getClubTeams();
 
     return (
       <SelectTeam teams={that.getTeams()} divisions={that.getDivisions()} weeks={that.getWeeks()} />

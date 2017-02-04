@@ -1,0 +1,32 @@
+﻿
+<div ng-controller="ParkingOverviewController">
+
+    <img ng-hide="parkings" src="img/722.gif" alt="waiting..." title="waiting..." />
+
+    <form class="form-inline" ng-show="parkings">
+        <fieldset>
+            <legend>Settings</legend>
+            <div class="form-container">
+                <label>Sorteren op</label>
+                <select class="form-control" ng-model="filterProperty">
+                    <!-- value starting with '-' means descending order -->
+                    <option value="description">op beschrijving</option>
+                    <option value="-description">op beschrijving aflopend</option>
+                    <option value="-availableCapacity">op beschikbare plaatsen</option>
+                </select>
+            </div>
+            <div class="form-container">
+                <label>Zoeken op</label>
+                <input type="text" ng-model="filter" placeholder="vrijdagmarkt" class="form-control" />
+            </div>
+        </fieldset>
+
+    </form>
+
+    <ul ng-show="parkings" id="parkings" class="clearfix">
+        <li ng-click="navigate(p)" ng-repeat="p in parkings| orderBy: filterProperty | filter: descriptionFilter">
+            <parking ng-class="getStatus(p)"></parking>
+        </li>
+    </ul>
+</div>
+

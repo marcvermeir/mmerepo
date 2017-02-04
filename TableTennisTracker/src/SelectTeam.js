@@ -4,10 +4,51 @@ var ReactDOM = require('react-dom');
 var Link = require('react-router').Link;
 var Select = require('react-select');
 
+var $ = require('jquery');
+
+/* var xml2json = require('jquery-xml2json').xml2json; */
+/* var JQuerySoap = require('./jquery.soap.js'); */
 
 var TeamOverview = require('./TeamOverview.js').TeamOverview;
 
 var SelectTeam = React.createClass({
+
+  /*
+  getTeams: function() {
+
+    return ttteams;
+  },
+  */
+
+  /*
+  getDivisions: function() {
+
+    $.soap({
+        url: 'http://api.vttl.be/0.7/index.php?s=vttl',
+        type: 'POST',
+        method: 'GetDivisions',
+        appendMethodToURL: false,
+        soap12: true,
+        context: document.body,
+        data: {
+        },
+
+        success: function (soapResponse) {
+
+        },
+        error: function (SOAPResponse) {
+        }
+    });
+
+    return ttdivisions;
+  },
+  */
+
+  /*
+  getWeeks: function() {
+    return ttweeks;
+  },
+  */
 
   teamChanged: function(value) {
     console.log(value);

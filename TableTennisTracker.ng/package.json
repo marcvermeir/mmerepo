@@ -34,7 +34,7 @@
     "chosen-js": "^1.6.2",
     "fontawesome": "^4.5.0",
     "history": "^1.17.0",
-    "jquery": "^2.2.1",
+    "jquery": "^3.4.1",
     "jquery-xml2json": "0.0.8"
   }
 }

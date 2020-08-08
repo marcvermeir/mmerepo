@@ -1,6 +1,0 @@
-
-** http://angularfirst.com/your-first-angular-project-in-visual-studio/
-
-http://angularfirst.com/your-first-angular-project-in-visual-studio/
-http://iranreyes.com/starting-angularjs-project-with-visual-studio/
-http://stephenwalther.com/archive/2015/01/12/asp-net-5-and-angularjs-part-1-configuring-grunt-uglify-and-angularjs
